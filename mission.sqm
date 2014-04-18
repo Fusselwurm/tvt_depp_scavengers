@@ -184,7 +184,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5765.1606,16.417166,6067.7261};
+					position[]={4257.3643,2.5801878,7227.9976};
 					id=12;
 					side="CIV";
 					vehicle="C_man_p_fugitive_F_afro";
@@ -198,7 +198,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			position[]={7152.958,0,5963.8589};
@@ -230,6 +230,14 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			skill=0.40000001;
+		};
+		class Item4
+		{
+			position[]={4262.0234,2.1324706,7226.0557};
+			id=17;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.60000002;
 		};
 	};
 };

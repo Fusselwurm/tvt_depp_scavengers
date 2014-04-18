@@ -1,9 +1,6 @@
 OnLoadMission = "The beach seems to hold a secret.";
 author="Fusselwurm";
-overviewText="
-After a naval battle that saw the sinking of a OPFOR supply vessel, debris has been washing up on the north east coast of Stratis.
-OPFOR hopes to retrieve something they lost in the sinking. But shhhhh... BLUFOR must never know.
-";
+overviewText="After a naval battle that saw the sinking of a OPFOR supply vessel, debris has been washing up on the north east coast of Stratis. OPFOR hopes to retrieve something they lost in the sinking. But shhhhh... BLUFOR must never know. ";
 onLoadName="Search the beach!";
 // overviewPicture="agent.jpg";
 onLoadMissionTime = true;
@@ -34,4 +31,3 @@ class CfgDebriefing
 		description = "BLUFOR eliminated all OPFOR personnel in the area. The coast is secure once more. Now for a look into those crates...";
 	};
 };
-
