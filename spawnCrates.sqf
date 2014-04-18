@@ -10,7 +10,16 @@ getPosById = {
     getPos xx
 };
 
+place_empty_crate = {
+    private ["_crate"];
+    _crate =  "Box_East_Wps_F" createVehicle _this;
+    ClearWeaponCargo _crate; ClearMagazineCargo _crate; 
+    _crate
+};
 
+add_crate_action = {
+    _this addAction ["search crate",  ""];
+};
 
 flotsamCandidatePositionIds = [
     1550,1745,
@@ -35,6 +44,7 @@ _flotsamCandidatePositions = [];
 } forEach flotsamCandidatePositionIds;
 
 {
-    "Box_East_Wps_F" createVehicle _x;
+    (_x call place_empty_crate) call add_crate_action;
 } forEach _flotsamCandidatePositions;
+
 
