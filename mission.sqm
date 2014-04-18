@@ -8,16 +8,12 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Boat_F_Boat_Armed_01",
-		"A3_Characters_F_Civil",
-		"a3_characters_f_gamma",
 		"A3_Air_F_Heli_Light_01"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_BLUFOR",
-		"A3_Characters_F_Civil",
-		"a3_characters_f_gamma",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Air_F_Heli_Light_01",
@@ -178,20 +174,19 @@ class Mission
 		};
 		class Item2
 		{
-			side="CIV";
+			side="EAST";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={4257.3643,2.5801878,7227.9976};
+					position[]={4257.2759,2.5769787,7228.144};
 					id=12;
-					side="CIV";
-					vehicle="C_man_p_fugitive_F_afro";
+					side="EAST";
+					vehicle="O_Soldier_F";
 					player="PLAYER COMMANDER";
 					leader=1;
-					rank="CORPORAL";
-					skill=0.40000001;
+					skill=0.60000002;
 				};
 			};
 		};

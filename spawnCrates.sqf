@@ -6,11 +6,24 @@
 
 private ["_flotsamCandidatePositions", "_forEachIndex", "_crates", "_magicCrate"];
 
-getPosById = {
+get_pos_by_id = {
 	//xx = _this call objectFromNetId;
 	//getPos xx
     xx = [0,0,0] nearestObject _this; 
     getPos xx
+};
+
+array_get_random = {
+	private ["_input", "_number", "_output", "_i"];
+	_input = + _this select 0;
+	_number = _this select 1;
+	_output = [];
+	
+	for [{_i = 0}, {_i < _number && (count _input) > 0}, {_i = _i + 1}] do {
+		_output = _output + [_input select (floor random count _input)];
+		_input = _input - _output;
+	};
+	_output
 };
 
 spawn_secret_weapon = {
@@ -68,12 +81,13 @@ flotsamCandidatePositionIds = [
 //    4180,4612
 ];
 
+flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 1] call array_get_random;
+
 _flotsamCandidatePositions = [];
 _crates = [];
 
 {
-	_tmp = _x call getPosById;
-    _flotsamCandidatePositions set [_forEachIndex, _tmp];
+    _flotsamCandidatePositions set [_forEachIndex,  _x call get_pos_by_id];
 } forEach flotsamCandidatePositionIds;
 
 {
