@@ -13,6 +13,13 @@ getPosById = {
     getPos xx
 };
 
+spawn_secret_weapon = {
+	private ["_wh"];
+	_wh = "groundWeaponHolder" createVehicle _this;
+	_wh addMagazineCargo ["RPG32_F", 1];
+	_wh addWeaponCargo ["launch_RPG32_F", 1];
+};
+
 place_empty_crate = {
     private ["_crate"];
     _crate =  "Box_East_Wps_F" createVehicle _this;
@@ -31,6 +38,10 @@ magic_crate_action = {
 	} else {
 		if (_crate == _magicCrate) then {
 			hint "Bingo. Look what we have...";
+			(getPos _player) call spawn_secret_weapon;
+			hint "Let's pick that up and get away from this island!";
+			// trigger_opfor_retrieved_weapon
+			
 		} else {
 			hint "This is not the crate we're looking for";            
 		}
@@ -44,7 +55,7 @@ add_crate_action = {
 flotsamCandidatePositionIds = [
 //    1550,1745,
 //    1514,1820,
-    1887,1894,
+    1887,//1894,
     1890
 //    1927,1980,
 //    2085,2061,
