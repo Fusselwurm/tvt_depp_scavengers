@@ -35,7 +35,8 @@ spawn_secret_weapon = {
 
 place_empty_crate = {
     private ["_crate"];
-    _crate =  "Box_East_Wps_F" createVehicle _this;
+    //_crate =  "Box_East_Wps_F" createVehicle _this;
+	_crate =  "Land_Pallet_Milboxes_F" createVehicle _this;
     ClearWeaponCargo _crate; ClearMagazineCargo _crate; 
     _crate
 };
@@ -66,22 +67,22 @@ add_crate_action = {
 };
 
 flotsamCandidatePositionIds = [
-//    1550,1745,
-//    1514,1820,
-    1887,//1894,
-    1890
-//    1927,1980,
-//    2085,2061,
-//    2090,2150,
-//    2106,2156,
-//    3371,3388,
-//    4156,4168,
-//    4100,4146,
-//    4147,4179,
-//    4180,4612
+    1550,1745,
+    1514,1820,
+    1887,1894,
+    1890,
+    1927,1980,
+    2085,2061,
+    2090,2150,
+    2106,2156,
+    3371,3388,
+    4156,4168,
+    4100,4146,
+    4147,4179,
+    4180,4612
 ];
 
-flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 1] call array_get_random;
+flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;
 
 _flotsamCandidatePositions = [];
 _crates = [];

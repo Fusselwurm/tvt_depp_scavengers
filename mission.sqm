@@ -8,15 +8,23 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Boat_F_Boat_Armed_01",
-		"A3_Air_F_Heli_Light_01"
+		"A3_Air_F_Heli_Light_01",
+		"A3_Modules_F_Multiplayer",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Soft_F_MRAP_01",
+		"a3_weapons_f_beta_ammoboxes"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_BLUFOR",
+		"A3_Modules_F_Multiplayer",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Air_F_Heli_Light_01",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Soft_F_MRAP_01",
+		"a3_weapons_f_beta_ammoboxes",
 		"a3_map_stratis"
 	};
 	randomSeed=10254956;
@@ -49,7 +57,7 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={7145.7212,2.8283167,5989.9307};
+					position[]={7109.4492,6.2974548,5981.3267};
 					id=0;
 					side="EAST";
 					vehicle="O_officer_F";
@@ -60,7 +68,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={7142.3574,1.2548804,5986.0752};
+					position[]={7103.7739,6.3043027,5977.5244};
 					id=1;
 					side="EAST";
 					vehicle="O_medic_F";
@@ -70,7 +78,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={7140.3711,3.3578491,5989.9619};
+					position[]={7101.7876,6.5173545,5981.4111};
 					id=2;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -79,7 +87,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={7141.8091,3.7274806,5994.0269};
+					position[]={7103.2256,6.7494655,5985.4761};
 					id=3;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -88,7 +96,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={7144.417,3.5140724,5994.4648};
+					position[]={7105.8335,6.5758548,5985.9141};
 					id=4;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -97,7 +105,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={7147.6519,5.9703026,5994.2959};
+					position[]={7109.0684,6.7613993,5985.7451};
 					id=5;
 					side="EAST";
 					vehicle="O_diver_F";
@@ -112,7 +120,7 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					position[]={5024.2539,208.84102,5926.5474};
@@ -170,50 +178,124 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 				};
+				class Item6
+				{
+					position[]={5020.8208,208.84322,5928.2334};
+					azimut=270;
+					offsetY=2;
+					special="NONE";
+					id=12;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					skill=0.60000002;
+				};
 			};
 		};
 		class Item2
 		{
-			side="EAST";
+			side="LOGIC";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={4257.2759,2.5769787,7228.144};
-					id=12;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAYER COMMANDER";
+					position[]={4127.167,0,7512.2637};
+					azimut=270;
+					class args
+					{
+						items=9;
+						class Item0
+						{
+							value="2";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Delay";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="DesertedDistance";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnCount";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Init";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Position";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="PositionType";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Wreck";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ShowNotification";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ForcedRespawn";
+						};
+					};
+					id=13;
+					side="LOGIC";
+					vehicle="ModuleRespawnVehicle_F";
 					leader=1;
+					lock="UNLOCKED";
 					skill=0.60000002;
+					text="boat_csat_extract_respawn";
+					syncId=0;
+					synchronizations[]={1};
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=5;
+		items=10;
 		class Item0
 		{
-			position[]={7152.958,0,5963.8589};
-			id=13;
+			position[]={7151.6846,0,5961.6118};
+			id=14;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			skill=0.60000002;
 		};
 		class Item1
 		{
-			position[]={7150.7778,0,5957.8604};
-			id=14;
+			position[]={7146.2837,0,5963.5527};
+			id=15;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			skill=0.40000001;
 		};
 		class Item2
 		{
-			position[]={7156.7969,-0.00057890604,5975.1401};
-			id=15;
+			position[]={7157.3032,-0.0026216272,5972.5107};
+			id=16;
 			side="EMPTY";
 			vehicle="O_Boat_Armed_01_hmg_F";
 			skill=0.40000001;
@@ -221,18 +303,176 @@ class Mission
 		class Item3
 		{
 			position[]={5007.9775,208.3289,5903.9844};
-			id=16;
+			azimut=75;
+			special="NONE";
+			id=17;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
+			lock="UNLOCKED";
 			skill=0.40000001;
 		};
 		class Item4
 		{
-			position[]={4262.0234,2.1324706,7226.0557};
-			id=17;
+			position[]={4129.5522,0,7510.9155};
+			azimut=270;
+			id=18;
 			side="EMPTY";
-			vehicle="B_Heli_Light_01_F";
+			vehicle="O_Boat_Transport_01_F";
+			leader=1;
 			skill=0.60000002;
+			text="boat_csat_extraction_backup";
+			syncId=1;
+			synchronizations[]={0};
+		};
+		class Item5
+		{
+			position[]={5035.1079,208.89772,5924.874};
+			azimut=200;
+			offsetY=2;
+			special="NONE";
+			id=19;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsSpecial_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={5032.0962,208.88179,5924.5181};
+			azimut=45;
+			offsetY=2;
+			special="NONE";
+			id=20;
+			side="EMPTY";
+			vehicle="Box_NATO_AmmoOrd_F";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={5033.5718,208.89513,5926.666};
+			azimut=150;
+			offsetY=2;
+			special="NONE";
+			id=21;
+			side="EMPTY";
+			vehicle="Box_NATO_Support_F";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={5015.5073,208.15327,5892.2407};
+			azimut=170;
+			offsetY=2;
+			special="NONE";
+			id=22;
+			side="EMPTY";
+			vehicle="B_MRAP_01_hmg_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={5035.6875,208.91032,5926.5366};
+			azimut=105;
+			offsetY=2;
+			special="NONE";
+			id=23;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsLaunch_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=3;
+		class Item0
+		{
+			position[]={7461.7207,-0.00074167748,7479.1211};
+			name="marker_opfor_domination";
+			text="OPFOR dominated";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="BDiagonal";
+			a=2000;
+			b=1000;
+			angle=45;
+		};
+		class Item1
+		{
+			position[]={4558.8691,0.019053085,7125.9229};
+			name="marker_flotsam";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="Border";
+			a=450;
+			b=150;
+			angle=30;
+			drawBorder=1;
+		};
+		class Item2
+		{
+			position[]={4120.4263,10.358625,7490.5146};
+			name="marker_opfor_extract";
+			type="b_naval";
+			colorName="ColorEAST";
+		};
+	};
+	class Sensors
+	{
+		items=3;
+		class Item0
+		{
+			position[]={7467.1909,-0.0044120685,7482.9326};
+			a=2000;
+			b=1000;
+			angle=45;
+			rectangular=1;
+			activationBy="LOGIC";
+			interruptable=1;
+			type="END1";
+			age="UNKNOWN";
+			name="end_opfor_win_evac";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={5019.4761,206.2561,5843.104};
+			a=4000;
+			b=3000;
+			angle=45;
+			rectangular=1;
+			activationBy="EAST";
+			activationType="NOT PRESENT";
+			interruptable=1;
+			type="END2";
+			age="UNKNOWN";
+			text="OPFOR has been eliminated from the area.";
+			name="end_blufor_win_elimination";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={5061.5264,202.24666,5840.2241};
+			a=4000;
+			b=3000;
+			angle=45;
+			rectangular=1;
+			activationBy="WEST";
+			activationType="NOT PRESENT";
+			interruptable=1;
+			type="END3";
+			age="UNKNOWN";
+			text="BLUFOR has been eliminated from the area.";
+			name="end_opfor_win_elimination";
+			class Effects
+			{
+			};
 		};
 	};
 };
