@@ -1,0 +1,37 @@
+OnLoadMission = "The beach seems to hold a secret.";
+author="Fusselwurm";
+overviewText="
+After a naval battle that saw the sinking of a OPFOR supply vessel, debris has been washing up on the north east coast of Stratis.
+OPFOR hopes to retrieve something they lost in the sinking. But shhhhh... BLUFOR must never know.
+";
+onLoadName="Search the beach!";
+// overviewPicture="agent.jpg";
+onLoadMissionTime = true;
+respawn = 3;
+respawnDelay = 300;
+disabledAI = false;
+debriefing = true;
+
+class CfgDebriefing
+{
+	class OpforExtract
+	{
+		title = "OPFOR win";
+		subtitle = "The secret... thing was found and extracted by OPFOR";
+		description = "OPFOR managed to find what they were looking for, and extract safely from the island.";
+	};
+	
+	class BluforEliminated
+	{
+		title = "OPFOR wins";
+		subtitle = "All BLUFOR were killed";
+		description = "OPFOR eliminated all BLUFOR personnel in the area. They now have near-unlimited time to get their stuff and extract.";
+	};
+	class OpforEliminated
+	{
+		title = "BLUFOR wins";
+		subtitle = "All OPFOR were killed";
+		description = "BLUFOR eliminated all OPFOR personnel in the area. The coast is secure once more. Now for a look into those crates...";
+	};
+};
+

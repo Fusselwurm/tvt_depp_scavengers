@@ -1,0 +1,327 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_stratis",
+		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_BLUFOR",
+		"A3_Boat_F_Boat_Transport_01",
+		"A3_Boat_F_Boat_Armed_01",
+		"A3_Characters_F_Civil",
+		"a3_characters_f_gamma",
+		"A3_Air_F_Heli_Light_01"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_BLUFOR",
+		"A3_Characters_F_Civil",
+		"a3_characters_f_gamma",
+		"A3_Boat_F_Boat_Transport_01",
+		"A3_Boat_F_Boat_Armed_01",
+		"A3_Air_F_Heli_Light_01",
+		"a3_map_stratis"
+	};
+	randomSeed=10254956;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=3;
+		class Item0
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={7145.7212,2.8283167,5989.9307};
+					id=0;
+					side="EAST";
+					vehicle="O_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={7142.3574,1.2548804,5986.0752};
+					id=1;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={7140.3711,3.3578491,5989.9619};
+					id=2;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={7141.8091,3.7274806,5994.0269};
+					id=3;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={7144.417,3.5140724,5994.4648};
+					id=4;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={7147.6519,5.9703026,5994.2959};
+					id=5;
+					side="EAST";
+					vehicle="O_diver_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={5024.2539,208.84102,5926.5474};
+					id=6;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={5029.2539,208.85014,5921.5474};
+					id=7;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={5019.2539,208.71416,5921.5474};
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={5034.2539,208.86829,5916.5474};
+					id=9;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={5015.4146,208.58934,5918.0273};
+					id=10;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={5024.6201,208.7739,5917.4326};
+					id=11;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item2
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5765.1606,16.417166,6067.7261};
+					id=12;
+					side="CIV";
+					vehicle="C_man_p_fugitive_F_afro";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.40000001;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=4;
+		class Item0
+		{
+			position[]={7152.958,0,5963.8589};
+			id=13;
+			side="EMPTY";
+			vehicle="O_Boat_Transport_01_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={7150.7778,0,5957.8604};
+			id=14;
+			side="EMPTY";
+			vehicle="O_Boat_Transport_01_F";
+			skill=0.40000001;
+		};
+		class Item2
+		{
+			position[]={7156.7969,-0.00057890604,5975.1401};
+			id=15;
+			side="EMPTY";
+			vehicle="O_Boat_Armed_01_hmg_F";
+			skill=0.40000001;
+		};
+		class Item3
+		{
+			position[]={5007.9775,208.3289,5903.9844};
+			id=16;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.40000001;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=3878740;
+	class Intel
+	{
+		briefingName="Scavengers";
+		overviewText="After recent battles, lots of stuff is washing up at the sea shore. CSAT seems to have lost something very special... we dont know what it is, but they must not find it.";
+		resistanceEast=1;
+		startWeather=0.25999999;
+		startWind=0.099999994;
+		forecastWeather=0.059999999;
+		forecastFog=0.47;
+		forecastWind=0.099999994;
+		forecastWaves=0;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=7;
+		day=6;
+		hour=5;
+		minute=15;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=13779013;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=16659407;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
