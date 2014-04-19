@@ -8,7 +8,6 @@ private ["_flotsamCandidatePositions", "_forEachIndex", "_crates", "_magicCrate"
 
 get_pos_by_id = {
 	//xx = _this call objectFromNetId;
-	//getPos xx
     xx = [0,0,0] nearestObject _this; 
     getPos xx
 };
@@ -67,10 +66,10 @@ add_crate_action = {
 };
 
 flotsamCandidatePositionIds = [
-    1550,1745,
+/*    1550,1745,
     1514,1820,
-    1887,1894,
-    1890,
+    1887,1894,*/
+    1890/*,
     1927,1980,
     2085,2061,
     2090,2150,
@@ -79,7 +78,7 @@ flotsamCandidatePositionIds = [
     4156,4168,
     4100,4146,
     4147,4179,
-    4180,4612
+    4180,4612*/
 ];
 
 flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;

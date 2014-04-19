@@ -11,20 +11,20 @@ debriefing = true;
 
 class CfgDebriefing
 {
-	class OpforExtract
+	class End1
 	{
 		title = "OPFOR win";
 		subtitle = "The secret... thing was found and extracted by OPFOR";
 		description = "OPFOR managed to find what they were looking for, and extract safely from the island.";
 	};
 	
-	class BluforEliminated
+	class End2
 	{
 		title = "OPFOR wins";
 		subtitle = "All BLUFOR were killed";
 		description = "OPFOR eliminated all BLUFOR personnel in the area. They now have near-unlimited time to get their stuff and extract.";
 	};
-	class OpforEliminated
+	class End3
 	{
 		title = "BLUFOR wins";
 		subtitle = "All OPFOR were killed";
