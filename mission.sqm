@@ -52,7 +52,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			side="EAST";
@@ -474,34 +474,16 @@ class Mission
 				};
 			};
 		};
-		class Item6
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4257.062,2.3602064,7230.9526};
-					id=16;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
 	};
 	class Vehicles
 	{
-		items=11;
+		items=10;
 		class Item0
 		{
 			position[]={7146.9946,0,5974.2549};
 			azimut=285;
 			special="NONE";
-			id=17;
+			id=16;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -512,7 +494,7 @@ class Mission
 			position[]={7147.5747,0,5968.1416};
 			azimut=270;
 			special="NONE";
-			id=18;
+			id=17;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -523,7 +505,7 @@ class Mission
 			position[]={5007.9775,208.3289,5903.9844};
 			azimut=75;
 			special="NONE";
-			id=19;
+			id=18;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			lock="UNLOCKED";
@@ -533,7 +515,7 @@ class Mission
 		{
 			position[]={4129.5522,0,7510.9155};
 			azimut=270;
-			id=20;
+			id=19;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			leader=1;
@@ -548,7 +530,7 @@ class Mission
 			azimut=200;
 			offsetY=2;
 			special="NONE";
-			id=21;
+			id=20;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsSpecial_F";
 			skill=0.60000002;
@@ -559,7 +541,7 @@ class Mission
 			azimut=45;
 			offsetY=2;
 			special="NONE";
-			id=22;
+			id=21;
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoOrd_F";
 			skill=0.60000002;
@@ -570,7 +552,7 @@ class Mission
 			azimut=150;
 			offsetY=2;
 			special="NONE";
-			id=23;
+			id=22;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
@@ -581,7 +563,7 @@ class Mission
 			azimut=105;
 			offsetY=2;
 			special="NONE";
-			id=24;
+			id=23;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsLaunch_F";
 			lock="UNLOCKED";
@@ -592,7 +574,7 @@ class Mission
 			position[]={5039.3809,208.92667,5892.2881};
 			azimut=195;
 			special="NONE";
-			id=25;
+			id=24;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			lock="UNLOCKED";
@@ -600,26 +582,16 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={7128.3613,5.7496104,5981.6899};
-			id=26;
+			position[]={7112.0151,6.3019848,5980.8203};
+			id=25;
 			side="EMPTY";
-			vehicle="O_supplyCrate_F";
-			leader=1;
-			skill=0.5;
-		};
-		class Item10
-		{
-			position[]={4261.0649,2.2081664,7227.0967};
-			id=27;
-			side="EMPTY";
-			vehicle="B_Heli_Light_01_F";
-			lock="UNLOCKED";
+			vehicle="Box_East_Ammo_F";
 			skill=0.60000002;
 		};
 	};
 	class Markers
 	{
-		items=4;
+		items=7;
 		class Item0
 		{
 			position[]={7461.7207,-0.00074167748,7479.1211};
@@ -656,15 +628,39 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={4379.2407,158.4368,5726.8433};
+			position[]={2748.6877,17.755255,3967.1382};
 			name="marker_game_border";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
 			fillName="Cross";
 			a=3000;
-			b=250;
+			b=2500;
 			angle=45;
+		};
+		class Item4
+		{
+			position[]={4524.6851,-9.4560108,7148.5674};
+			name="marker_opfor_objective_1";
+			text="find the secret weapon";
+			type="mil_pickup";
+			colorName="ColorEAST";
+		};
+		class Item5
+		{
+			position[]={7112.1025,-86.055206,7406.8989};
+			name="marker_opfor_objective_2";
+			text="extract into the east";
+			type="mil_end";
+			colorName="ColorEAST";
+		};
+		class Item6
+		{
+			position[]={3408.4575,107.84975,4281.1626};
+			name="marker_opfor_objective_3";
+			text="beware enemy patrols";
+			type="mil_warning";
+			colorName="ColorWEST";
 		};
 	};
 	class Sensors
