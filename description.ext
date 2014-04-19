@@ -2,7 +2,6 @@ OnLoadMission = "Something interesting is hidden on the beach";
 author="Fusselwurm";
 overviewText="After a naval battle that saw the sinking of a OPFOR supply vessel, debris has been washing up on the north east coast of Stratis. OPFOR hopes to retrieve something they lost in the sinking. But shhhhh... BLUFOR must never know. ";
 onLoadName="Scavengers";
-// overviewPicture="agent.jpg";
 onLoadMissionTime = true;
 respawn = 4;
 respawnDialog = 1;

@@ -4,7 +4,7 @@
 //	* PRIM 30' in Basis aushalten
 //	* SEC  exfiltrieren aufs Meer
 
-private ["_flotsamCandidatePositions", "_forEachIndex", "_crates", "_magicCrate"];
+private ["_flotsamCandidatePositions", "_forEachIndex"];
 
 get_pos_by_id = {
 	//xx = _this call objectFromNetId;
@@ -40,31 +40,6 @@ place_empty_crate = {
     _crate
 };
 
-magic_crate_action = {
-	private ["_crate", "_magicCrate", "_player"];
-	_crate = _this select 0;
-	_magicCrate = _this select 3;
-	_player = _this select 1;
-	
-	if (side _player != east) then {
-		hint "Looks pretty normal to me. But then, I don't really know what to look for...";
-	} else {
-		if (_crate == _magicCrate) then {
-			hint "Bingo. Look what we have...";
-			(getPos _player) call spawn_secret_weapon;
-			hint "Let's pick that up and get away from this island!";
-			// trigger_opfor_retrieved_weapon
-			
-		} else {
-			hint "This is not the crate we're looking for";            
-		}
-	}
-};
-
-add_crate_action = {
-    _this addAction ["search crate",  magic_crate_action, _magicCrate];
-};
-
 flotsamCandidatePositionIds = [
     1550,1745,
     1514,1820,
@@ -84,18 +59,12 @@ flotsamCandidatePositionIds = [
 flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;
 
 _flotsamCandidatePositions = [];
-_crates = [];
-
 {
     _flotsamCandidatePositions set [_forEachIndex,  _x call get_pos_by_id];
 } forEach flotsamCandidatePositionIds;
 
 {
-	_crates set [_forEachIndex, _x call place_empty_crate];
+	crates set [_forEachIndex, _x call place_empty_crate];
 } forEach _flotsamCandidatePositions;
 
-_magicCrate = _crates select floor random count _crates;
-
-{
-	_x call add_crate_action;   
-} forEach _crates;
+magicCrate = crates select floor random count crates;
