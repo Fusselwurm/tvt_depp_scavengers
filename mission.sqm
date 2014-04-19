@@ -52,7 +52,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			side="EAST";
@@ -116,6 +116,30 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=2;
+				class Item0
+				{
+					position[]={7109.4492,6.2974548,5981.3267};
+					id=0;
+					script="opforGroup = group _this;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={5193.8892,165.89197,5957.2896};
+					id=6;
+					script="bluforGroup = group _this;";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -272,7 +296,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4364.3486,138.94113,5810.9673};
+					position[]={4286.5483,133.70107,5806.105};
 					azimut=270;
 					special="NONE";
 					id=13;
@@ -285,11 +309,46 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=1;
+				items=5;
 				class Item0
 				{
-					position[]={4996.2173,208.20021,5905.4756};
-					type="GUARD";
+					position[]={5250.8716,155.35246,5793.5889};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={5279.6851,198.99812,4924.5361};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={4282.8716,208.77255,3745.3789};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={3791.7576,193.22267,4841.873};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={4286.5483,133.70107,5806.105};
+					id=13;
+					type="SAD";
 					class Effects
 					{
 					};
@@ -319,11 +378,49 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=1;
+				items=5;
 				class Item0
 				{
-					position[]={4640.7817,142.63701,5874.7354};
+					position[]={3821.6279,190.66048,4669.7012};
 					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={3444.5679,144.60786,2648.0903};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={5058.043,180.17476,4629.3105};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={3920.4336,94.792206,5775.1445};
+					speed="FULL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={3184.6838,4.2328768,5917.6548};
+					id=14;
+					type="SAD";
+					speed="NORMAL";
 					class Effects
 					{
 					};
@@ -377,16 +474,34 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4257.062,2.3602064,7230.9526};
+					id=16;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			position[]={7146.9946,0,5974.2549};
 			azimut=285;
 			special="NONE";
-			id=16;
+			id=17;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -397,7 +512,7 @@ class Mission
 			position[]={7147.5747,0,5968.1416};
 			azimut=270;
 			special="NONE";
-			id=17;
+			id=18;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -408,7 +523,7 @@ class Mission
 			position[]={5007.9775,208.3289,5903.9844};
 			azimut=75;
 			special="NONE";
-			id=18;
+			id=19;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			lock="UNLOCKED";
@@ -418,7 +533,7 @@ class Mission
 		{
 			position[]={4129.5522,0,7510.9155};
 			azimut=270;
-			id=19;
+			id=20;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			leader=1;
@@ -433,7 +548,7 @@ class Mission
 			azimut=200;
 			offsetY=2;
 			special="NONE";
-			id=20;
+			id=21;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsSpecial_F";
 			skill=0.60000002;
@@ -444,7 +559,7 @@ class Mission
 			azimut=45;
 			offsetY=2;
 			special="NONE";
-			id=21;
+			id=22;
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoOrd_F";
 			skill=0.60000002;
@@ -455,7 +570,7 @@ class Mission
 			azimut=150;
 			offsetY=2;
 			special="NONE";
-			id=22;
+			id=23;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
@@ -466,7 +581,7 @@ class Mission
 			azimut=105;
 			offsetY=2;
 			special="NONE";
-			id=23;
+			id=24;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsLaunch_F";
 			lock="UNLOCKED";
@@ -477,7 +592,7 @@ class Mission
 			position[]={5039.3809,208.92667,5892.2881};
 			azimut=195;
 			special="NONE";
-			id=24;
+			id=25;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			lock="UNLOCKED";
@@ -486,16 +601,25 @@ class Mission
 		class Item9
 		{
 			position[]={7128.3613,5.7496104,5981.6899};
-			id=25;
+			id=26;
 			side="EMPTY";
 			vehicle="O_supplyCrate_F";
 			leader=1;
 			skill=0.5;
 		};
+		class Item10
+		{
+			position[]={4261.0649,2.2081664,7227.0967};
+			id=27;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			position[]={7461.7207,-0.00074167748,7479.1211};
@@ -530,6 +654,18 @@ class Mission
 			type="b_naval";
 			colorName="ColorEAST";
 		};
+		class Item3
+		{
+			position[]={4379.2407,158.4368,5726.8433};
+			name="marker_game_border";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Cross";
+			a=3000;
+			b=250;
+			angle=45;
+		};
 	};
 	class Sensors
 	{
@@ -547,16 +683,17 @@ class Mission
 			age="UNKNOWN";
 			text="mist";
 			name="end_opfor_win_evac";
-			expCond="this && ([] call opfor_has_infiniLauncher);";
+			expCond="end_opfor_win_evac call opfor_has_won_in_trigger;";
+			expActiv="""OpforExtract"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};
 		};
 		class Item1
 		{
-			position[]={5019.4761,206.2561,5843.104};
+			position[]={6304.1377,0.0019561897,7057.4722};
 			a=4000;
-			b=3000;
+			b=2200;
 			angle=45;
 			rectangular=1;
 			activationBy="EAST";
@@ -566,15 +703,17 @@ class Mission
 			age="UNKNOWN";
 			text="OPFOR has been eliminated from the area.";
 			name="end_blufor_win_elimination";
+			expCond="this or {alive _x} count units opforGroup == 0;";
+			expActiv="""OpforEliminated"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};
 		};
 		class Item2
 		{
-			position[]={5061.5264,202.24666,5840.2241};
-			a=4000;
-			b=3000;
+			position[]={5886.3652,0.00098886341,7193.0625};
+			a=25000;
+			b=2000;
 			angle=45;
 			rectangular=1;
 			activationBy="WEST";
@@ -584,6 +723,8 @@ class Mission
 			age="UNKNOWN";
 			text="BLUFOR has been eliminated from the area.";
 			name="end_opfor_win_elimination";
+			expCond="this or {alive _x} count units bluforGroup == 0;";
+			expActiv="""OpforEliminated"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};
