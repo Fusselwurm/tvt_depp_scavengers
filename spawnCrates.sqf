@@ -4,7 +4,7 @@
 //	* PRIM 30' in Basis aushalten
 //	* SEC  exfiltrieren aufs Meer
 
-private ["_flotsamCandidatePositions", "_forEachIndex"];
+private ["_flotsamCandidatePositions", "_forEachIndex",  "_crates", "_magicCrate"];
 
 get_pos_by_id = {
 	//xx = _this call objectFromNetId;
@@ -25,26 +25,21 @@ array_get_random = {
 	_output
 };
 
-spawn_secret_weapon = {
-	private ["_wh"];
-	_wh = "groundWeaponHolder" createVehicle _this;
-	_wh addMagazineCargo ["RPG32_F", 1];
-	_wh addWeaponCargo ["launch_RPG32_F", 1];
-};
 
 place_empty_crate = {
     private ["_crate"];
     //_crate =  "Box_East_Wps_F" createVehicle _this;
 	_crate =  "Land_Pallet_Milboxes_F" createVehicle _this;
+	_crate setVariable ["magic", 0, true];
     ClearWeaponCargo _crate; ClearMagazineCargo _crate; 
     _crate
 };
 
 flotsamCandidatePositionIds = [
-    1550,1745,
+/*    1550,1745,
     1514,1820,
-    1887,1894,
-    1890,
+    1894,*/1887,
+    1890/*,
     1927,1980,
     2085,2061,
     2090,2150,
@@ -53,7 +48,7 @@ flotsamCandidatePositionIds = [
     4156,4168,
     4100,4146,
     4147,4179,
-    4180,4612
+    4180,4612*/
 ];
 
 flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;
@@ -63,8 +58,10 @@ _flotsamCandidatePositions = [];
     _flotsamCandidatePositions set [_forEachIndex,  _x call get_pos_by_id];
 } forEach flotsamCandidatePositionIds;
 
+_crates = [];
 {
-	crates set [_forEachIndex, _x call place_empty_crate];
+	_crates set [_forEachIndex, _x call place_empty_crate];
 } forEach _flotsamCandidatePositions;
 
-magicCrate = crates select floor random count crates;
+_magicCrate = _crates select floor random count _crates;
+_magicCrate setVariable ["magic", 1, true];
