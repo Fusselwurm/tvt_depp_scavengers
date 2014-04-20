@@ -436,7 +436,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7885.1235,-116.24068,7984.7407};
+					position[]={7182.3267,-0.013712302,5956.3979};
 					id=15;
 					side="EAST";
 					vehicle="O_Boat_Armed_01_hmg_F";
@@ -447,11 +447,11 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
-					position[]={7826.3999,-0.002554754,6037.582};
-					type="GUARD";
+					position[]={7053.7656,-0.019584678,5728.2925};
+					type="SAD";
 					combatMode="YELLOW";
 					speed="FULL";
 					combat="AWARE";
@@ -462,11 +462,23 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={7508.0547,-0.36398825,7759.1177};
-					type="GUARD";
+					position[]={6889.7026,-0.4250437,5870.0645};
+					type="SAD";
 					combatMode="YELLOW";
 					speed="NORMAL";
 					combat="COMBAT";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={7884.7446,-0.35579935,7920.7446};
+					type="GUARD";
+					combatMode="YELLOW";
+					speed="FULL";
+					combat="AWARE";
 					class Effects
 					{
 					};
@@ -705,6 +717,9 @@ class Mission
 			angle=45;
 			rectangular=1;
 			activationBy="EAST";
+			timeoutMin=10;
+			timeoutMid=12;
+			timeoutMax=15;
 			interruptable=1;
 			type="END1";
 			age="UNKNOWN";

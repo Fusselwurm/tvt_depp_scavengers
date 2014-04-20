@@ -9,7 +9,6 @@ if (side player != east) then {
 
 if (isServer) then {
 	[] execVM "spawnCrates.sqf";
-	[] execVM "conditions.sqf";
 	
 	crates = true;
 	publicVariable "crates";	
@@ -21,5 +20,4 @@ if (isNil("crates")) then {
 	[] execVM "crateAction.sqf";
 };
 
-
-
+[] execVM "conditions.sqf";

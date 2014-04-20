@@ -1,6 +1,6 @@
 get_infiniLauncher_owner = {
     private ["_result"];
-	_result = nullObj;
+	_result = objNull;
 	{
 		if ("launch_RPG32_F" in weapons _x)  then {
 			_result = _x;
