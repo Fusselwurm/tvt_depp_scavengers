@@ -1,5 +1,5 @@
-secretWeaponID = "launch_RPG32_F";
-secretWeaponMagazineID = "RPG32_F";
+infiniWeaponID = "launch_RPG32_F";
+infiniWeaponMagazineID = "RPG32_F";
 
 if (side player != east) then {
 	"marker_opfor_extract" setMarkerAlphaLocal 0;
@@ -22,4 +22,4 @@ if (isNil("crates")) then {
 };
 
 [] execVM "conditions.sqf";
-[] execVM "infiniLauncher.sqf";
+[infiniWeaponID, infiniWeaponMagazineID] execVM "infiniWeapon.sqf";

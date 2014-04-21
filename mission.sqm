@@ -14,7 +14,8 @@ class Mission
 		"a3_weapons_f_beta_ammoboxes",
 		"A3_Armor_F_Panther",
 		"A3_Armor_F_AMV",
-		"A3_Boat_F_Boat_Armed_01"
+		"A3_Boat_F_Boat_Armed_01",
+		"A3_Air_F_Beta_Heli_Attack_01"
 	};
 	addOnsAuto[]=
 	{
@@ -24,6 +25,7 @@ class Mission
 		"A3_Armor_F_Panther",
 		"A3_Armor_F_AMV",
 		"A3_Boat_F_Boat_Armed_01",
+		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Weapons_F_Ammoboxes",
@@ -52,7 +54,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			side="EAST";
@@ -486,16 +488,138 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4778.1758,5.3466649,6933.856};
+					id=16;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1890.4025,5.552043,5609.2354};
+					azimut=5;
+					id=17;
+					side="WEST";
+					vehicle="B_Heli_Attack_01_F";
+					leader=1;
+					lock="LOCKEDPLAYER";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={1931.22,5.7241497,5596.6299};
+					azimut=10;
+					id=18;
+					side="WEST";
+					vehicle="B_Heli_Attack_01_F";
+					lock="LOCKEDPLAYER";
+					rank="SERGEANT";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={1922.0637,5.7052965,5565.8813};
+					azimut=355;
+					id=19;
+					side="WEST";
+					vehicle="B_Heli_Attack_01_F";
+					lock="LOCKEDPLAYER";
+					rank="SERGEANT";
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=6;
+				class Item0
+				{
+					position[]={1894.4625,5.6415629,5605.8994};
+					type="HOLD";
+					synchronizations[]={3};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					syncId=2;
+				};
+				class Item1
+				{
+					position[]={3481.687,53.387436,4120.0313};
+					type="SAD";
+					combatMode="RED";
+					combat="COMBAT";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={7444.7686,-0.0014153022,5597.9316};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={6726.4609,0.00027431251,7736.3447};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={1921.9127,5.6999998,5611.8477};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={1890.4025,5.552043,5609.2354};
+					id=17;
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			position[]={7146.9946,0,5974.2549};
 			azimut=285;
 			special="NONE";
-			id=16;
+			id=20;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -506,7 +630,7 @@ class Mission
 			position[]={7147.5747,0,5968.1416};
 			azimut=270;
 			special="NONE";
-			id=17;
+			id=21;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			lock="UNLOCKED";
@@ -517,7 +641,7 @@ class Mission
 			position[]={5007.9775,208.3289,5903.9844};
 			azimut=75;
 			special="NONE";
-			id=18;
+			id=22;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			lock="UNLOCKED";
@@ -527,7 +651,7 @@ class Mission
 		{
 			position[]={4129.5522,0,7510.9155};
 			azimut=270;
-			id=19;
+			id=23;
 			side="EMPTY";
 			vehicle="O_Boat_Transport_01_F";
 			leader=1;
@@ -542,7 +666,7 @@ class Mission
 			azimut=200;
 			offsetY=2;
 			special="NONE";
-			id=20;
+			id=24;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsSpecial_F";
 			skill=0.60000002;
@@ -553,7 +677,7 @@ class Mission
 			azimut=45;
 			offsetY=2;
 			special="NONE";
-			id=21;
+			id=25;
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoOrd_F";
 			skill=0.60000002;
@@ -564,7 +688,7 @@ class Mission
 			azimut=150;
 			offsetY=2;
 			special="NONE";
-			id=22;
+			id=26;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
@@ -575,7 +699,7 @@ class Mission
 			azimut=105;
 			offsetY=2;
 			special="NONE";
-			id=23;
+			id=27;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsLaunch_F";
 			lock="UNLOCKED";
@@ -586,7 +710,7 @@ class Mission
 			position[]={5039.3809,208.92667,5892.2881};
 			azimut=195;
 			special="NONE";
-			id=24;
+			id=28;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			lock="UNLOCKED";
@@ -595,9 +719,18 @@ class Mission
 		class Item9
 		{
 			position[]={7112.0151,6.3019848,5980.8203};
-			id=25;
+			id=29;
 			side="EMPTY";
 			vehicle="Box_East_Ammo_F";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={4787.0674,4.8498268,6929.917};
+			id=30;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 	};
@@ -668,7 +801,7 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={3408.4575,107.84975,4281.1626};
+			position[]={4739.6455,140.38649,5204.6304};
 			name="marker_opfor_objective_3";
 			text="beware enemy patrols";
 			type="mil_warning";
@@ -677,7 +810,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			position[]={7467.1909,-0.0044120685,7482.9326};
@@ -739,6 +872,28 @@ class Mission
 			class Effects
 			{
 			};
+		};
+		class Item3
+		{
+			position[]={2915.377,59.152119,3785.9673};
+			a=2000;
+			b=2500;
+			angle=45;
+			rectangular=1;
+			activationBy="EAST";
+			timeoutMin=30;
+			timeoutMid=50;
+			timeoutMax=120;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[] call blufor_general_alarm;";
+			class Effects
+			{
+				sound="Alarm_BLUFOR";
+			};
+			synchronizations[]={2};
+			syncId=3;
 		};
 	};
 };
