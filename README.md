@@ -8,7 +8,5 @@ ArmA3 pvp mission
 
 TODO:
 
-* test magic crate synchronization
 * more crate positions
-* powerful infiniLauncher
-
+* if the launcher is spawning it, and you're unable to carry the RPG, spawn it on the ground. or, find a method to force-load the launcher

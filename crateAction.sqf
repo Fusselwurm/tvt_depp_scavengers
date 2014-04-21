@@ -5,8 +5,8 @@ _crates = nearestObjects [getMarkerPos "marker_coast_area", ["Land_Pallet_Milbox
 spawn_secret_weapon = {
 	private ["_wh"];
 	_wh = "groundWeaponHolder" createVehicle _this;
-	_wh addMagazineCargo [secretWeaponMagazineID, 1];
-	_wh addWeaponCargo [secretWeaponID, 1];
+	_wh addMagazineCargoGlobal [secretWeaponMagazineID, 1];
+	_wh addWeaponCargoGlobal [secretWeaponID, 1];
 };
 
 magic_crate_action = {
