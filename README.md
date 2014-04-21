@@ -8,5 +8,4 @@ ArmA3 pvp mission
 
 TODO:
 
-* more crate positions
 * if the launcher is spawning it, and you're unable to carry the RPG, spawn it on the ground. or, find a method to force-load the launcher

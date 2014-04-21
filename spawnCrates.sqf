@@ -28,18 +28,17 @@ array_get_random = {
 
 place_empty_crate = {
     private ["_crate"];
-    //_crate =  "Box_East_Wps_F" createVehicle _this;
-	_crate =  "Land_Pallet_Milboxes_F" createVehicle _this;
+	_crate = "Land_Pallet_Milboxes_F" createVehicle _this;
 	_crate setVariable ["magic", 0, true];
     ClearWeaponCargo _crate; ClearMagazineCargo _crate; 
     _crate
 };
 
 flotsamCandidatePositionIds = [
-/*    1550,1745,
+    1550,1745,
     1514,1820,
-    1894,*/1887,
-    1890/*,
+    1894,1887,
+    1890,
     1927,1980,
     2085,2061,
     2090,2150,
@@ -48,7 +47,7 @@ flotsamCandidatePositionIds = [
     4156,4168,
     4100,4146,
     4147,4179,
-    4180,4612*/
+    4180,4612
 ];
 
 flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;
