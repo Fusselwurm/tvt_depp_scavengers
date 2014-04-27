@@ -4,7 +4,7 @@
 //	* PRIM 30' in Basis aushalten
 //	* SEC  exfiltrieren aufs Meer
 
-private ["_flotsamCandidatePositions", "_forEachIndex",  "_crates", "_magicCrate"];
+private ["_flotsamCandidatePositions", "_forEachIndex", "_crate", "_crates", "_magicCrate"];
 
 get_pos_by_id = {
 	//xx = _this call objectFromNetId;
@@ -35,19 +35,18 @@ place_empty_crate = {
 };
 
 flotsamCandidatePositionIds = [
-    1550,1745,
-    1514,1820,
-    1894,1887,
-    1890,
-    1927,1980,
-    2085,2061,
-    2090,2150,
-    2106,2156,
-    3371,3388,
-    4156,4168,
-    4100,4146,
-    4147,4179,
-    4180,4612
+	1820, 1887, 1890, 1894,
+	1927,1980,
+	2085,2061, 2090,
+	2106, 2150, 2156,
+	2173,
+	3371, 3388,
+	4001, 4006, 4012, 4070,
+	4100, 4146, 4147, 4156, 4168, 4179, 4180,
+
+	4612, 4623,
+	6521, 6574,
+	6606
 ];
 
 flotsamCandidatePositionIds = [flotsamCandidatePositionIds, 10] call array_get_random;
@@ -59,7 +58,9 @@ _flotsamCandidatePositions = [];
 
 _crates = [];
 {
-	_crates set [_forEachIndex, _x call place_empty_crate];
+	_crate = _x call place_empty_crate;
+	_crates set [_forEachIndex, _crate];
+
 } forEach _flotsamCandidatePositions;
 
 _magicCrate = _crates select floor random count _crates;

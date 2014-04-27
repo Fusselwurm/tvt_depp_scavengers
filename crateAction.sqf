@@ -39,9 +39,12 @@ magic_crate_action = {
 };
 
 add_crate_action = {
-    _this addAction ["search crate",  magic_crate_action];
+	_this addAction ["search crate",  magic_crate_action];
 };
 
 {
 	_x call add_crate_action;
+
+	//_marker = createMarker ["cratemarker_" + format ["%1", _forEachIndex], getPos _x];
+	//_marker setMarkerType "mil_dot";
 } forEach _crates;
